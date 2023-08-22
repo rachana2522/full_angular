@@ -1,0 +1,213 @@
+<div class="mat-elevation-z8" style="margin-top: 20px;">
+
+    <table mat-table [dataSource]="dataSource" class="mat-table">
+  
+   
+  
+      <ng-container matColumnDef="Actions">
+  
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+  
+        <td mat-cell *matCellDef="let element"> <button (click)="onLocalstorage()" style="border: none;" ><img src="../../assets/images/check.png" style="width: 15px; height: 15px;" alt=""></button> <button style="border: none;" ><img src="../../assets/images/close (1).png"  style="width: 15px; height: 15px;" alt=""></button> {{ element.Actions }} </td>
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="Code">
+  
+        <th mat-header-cell *matHeaderCellDef> Teacher Name </th>
+  
+        <td mat-cell *matCellDef="let element"> <input type="text" name="" id="" style="width: 120px;" placeholder="enter code" [(ngModel)]="code" [disabled]="isDisabled" > {{element.Code}} </td>
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="CourseName">
+  
+        <th mat-header-cell *matHeaderCellDef> Course Assigned</th>
+  
+        <td mat-cell *matCellDef="let element"> 
+             <!-- <input type="text" name="course" id="" style="width: 120px;" placeholder="enter course name" [(ngModel)]="course" [disabled]="isDisabled" >  -->
+            
+            <select  name="course" id="" style="width: 120px;" placeholder="enter course name" [(ngModel)]="course" [disabled]="isDisabled"> 
+                <option value="java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Python">Python</option>
+              </select>
+            
+            {{element.CourseName}} </td>
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="TheoryTime">
+  
+        <th mat-header-cell *matHeaderCellDef> Email ID </th>
+  
+        <td mat-cell *matCellDef="let element"> <input type="text" name="" id="" style="width: 120px;" placeholder="0 hours" [(ngModel)]="Theorytime" [disabled]="isDisabled" > {{element.TheoryTime}} </td>
+  
+      </ng-container>
+  
+   
+  
+      <!-- <ng-container matColumnDef="PractiseTime">
+  
+        <th mat-header-cell *matHeaderCellDef> Practise Time </th>
+  
+        <td mat-cell *matCellDef="let element"> <input type="text" name="practisetime" id="practisetime" style="width: 120px;" placeholder="0 hours" [(ngModel)]="practisetime" [disabled]="isDisabled" > {{element.PractiseTime}} </td>
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="Description">
+  
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+  
+        <td mat-cell *matCellDef="let element"> <button  data-target="#modalCart" data-toggle="modal" [disabled]="isDisabled">Add descriptiions</button>{{element.Description}} </td>
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="Topics">
+  
+        <th mat-header-cell *matHeaderCellDef> Topics </th>
+  
+        <td mat-cell *matCellDef="let element"><button data-target="#modalCart1" data-toggle="modal"  [disabled]="isDisabled" >Add Topics</button>{{element.Topics}} </td>
+  
+      </ng-container> -->
+  
+   
+  
+
+  
+   
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+    <!-- <div class="overlay shadow-none" *ngIf="popup">
+        <div class="popup">
+            <h2>Descriptions</h2>
+            <a class="close" (click)="popup = false">&times;</a>
+            <div class="content">
+                
+          <input type="text" name="" id="" style="width: 400px; height:160px;">
+           <div class="btn justify-content-spacearound"  style="display: flex;">
+            <div class="btn1">
+                <button type="button" class="btn btn-primary mx-2">Save</button>
+            </div>
+            <div class="btn2">
+                <button type="button" class="btn btn-outline-danger">Cancel</button>
+            </div>
+           </div>
+          
+         
+            </div>
+        </div>
+    </div> -->
+    <!-- Button trigger modal-->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCart">Launch modal</button> -->
+
+<!-- FOR DESCRIPTION  -->
+<!-- Modal: modalCart -->
+<!-- <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" style="margin-top: 20%;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Descriptions</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <input type="text" name="descriptions" id="" style="width: 400px; height:160px;" [(ngModel)]="descriptions">
+        <div class="btn justify-content-spacearound"  style="display: flex;">
+         <div class="btn1">
+             <button type="button" class="btn btn-primary mx-2" data-dismiss="modal">Save</button>
+         </div>
+         <div class="btn2">
+             <button type="button" class="btn btn-outline-danger">Cancel</button>
+         </div>
+        </div>
+     
+      </div>
+      
+    </div>
+  </div>
+</div> -->
+<!-- Modal: modalCart -->
+
+<!-- FOR TOPIC  -->
+
+<!-- <div class="modal fade" id="modalCart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" style="margin-top: 20%;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Topic</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+  
+      <div class="modal-body">
+        <input type="text" name="topics" id="" style="width: 400px; height:160px;" [(ngModel)]="topics">
+        <div class="btn justify-content-spacearound"  style="display: flex;">
+         <div class="btn1">
+             <button type="button" class="btn btn-primary mx-2" data-dismiss="modal">Save</button>
+         </div>
+         <div class="btn2">
+             <button type="button" class="btn btn-outline-danger">Cancel</button>
+         </div>
+        </div>
+     
+      </div>
+      
+    </div>
+  </div>
+</div> -->
+
+<!-- local storage start  -->
+
+
+<!-- local storage end  -->
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Actions</th>
+      <th>Teacher Name</th>
+      <th>Course Assigned</th>
+      <th>Email Id</th>
+      <!-- <th>Practice Time</th>
+      <th>Description</th>
+      <th>Topics</th>
+       -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entry of entries">
+      <td><button (click)="editRow(entry)" style="border: none;" ><img src="../../assets/images/pencil (2).png" alt=""></button> <button (click)="deleteRow(entry)" style="border: none;" ><img src="../../assets/images/bin.png" alt=""></button> </td>
+      <td>{{ entry.code }}</td>
+      <td>{{ entry.course }}</td>
+      <td>{{ entry.Theorytime }}</td>
+      <!-- <td>{{ entry.practisetime }}</td>
+      <td>{{ entry.descriptions }}</td>
+      <td>{{ entry.topics }}</td> -->
+    </tr>
+  </tbody>
+</table>
+
+
+
+  </div>
