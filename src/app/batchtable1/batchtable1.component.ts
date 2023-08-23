@@ -56,5 +56,35 @@ Student: any;
   onDateChange(event: any): void {
     this.selectedDate = event.value;
   }
-
+   edittable2:boolean=true;
+    toggletable2(){
+      this.edittable2 = !this.edittable2;
+      if (this.edittable2==false) {
+       
+      this.var4=false
+      this.var5=false;
+      this.var6=false;
+      this.var1=true;
+      this.var2=true;
+      this.var3=true;
+     }
+     if (this.edittable2==true) {
+       
+      this.var1=false
+      this.var2=false;
+      this.var3=false;
+      this.var4=true;
+      this.var5=true;
+      this.var6=true;
+     }
+  
+    }
+   
+   
+  
+  table2 = true;
+  deletetable2(){
+      this.table2=false;
+      this.container5.clear()
+  }
 }

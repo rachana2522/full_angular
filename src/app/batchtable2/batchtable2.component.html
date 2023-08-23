@@ -2,7 +2,7 @@
 
  
 
-  <table mat-table [dataSource]="dataSource" class="mat-table">
+  <table mat-table [dataSource]="dataSource" class="mat-table" *ngIf="table3">
 
 
 
@@ -28,11 +28,11 @@
 
             <img src="../../assets/images/drop.png" style="width: 15px; height: 15px; opacity: .4;" alt=""></button>
 
-        </span> <button>
+        </span> <button (click)="edittable3()">
 
           <img src="../../assets/images/pencil (2).png" alt="">
 
-        </button> <button><img src="../../assets/images/bin.png" alt=""></button> <button (click)="seclick()"><img
+        </button> <button (click)="deletetable3()" ><img src="../../assets/images/bin.png" alt=""></button> <button (click)="seclick()"><img
 
             src="../../assets/images/plus.png" alt=""></button> {{ element.Actions }}
 
