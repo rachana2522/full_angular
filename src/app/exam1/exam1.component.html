@@ -1,0 +1,100 @@
+<div class="mat-elevation-z8" style="margin-top: 20px;">
+
+    <table mat-table [dataSource]="dataSource" class="mat-table" *ngIf="var9">
+
+
+
+        <ng-container matColumnDef="Actions">
+
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+
+            <td mat-cell *matCellDef="let element">
+                <button (click)="onedit()" style="border: none;" *ngIf="var5"><img
+                        src="../../assets/images/pencil (2).png" style="width: 15px; height: 15px;" alt=""></button>
+                <button (click)="ondelete()" style="border: none;" *ngIf="var6"><img src="../../assets/images/bin.png"
+                        style="width: 15px; height: 15px;" alt=""></button>
+                <button (click)="onLocalstorage()" style="border: none;" *ngIf="var7">
+                    <img src="../../assets/images/check.png" style="width: 15px; height: 15px;" alt=""></button>
+                <button style="border: none;" *ngIf="var8"><img src="../../assets/images/close (1).png"
+                        style="width: 15px; height: 15px;" alt=""></button> {{ element.Actions }}
+            </td>
+
+        </ng-container>
+
+
+
+
+        <ng-container matColumnDef="Course">
+
+            <th mat-header-cell *matHeaderCellDef> Course Name </th>
+
+            <td mat-cell *matCellDef="let element"> <input type="text" name="course" id="" style="width: 120px;"
+                    placeholder="enter course name" [(ngModel)]="course" *ngIf="var3" [disabled]="isDisabled">
+                {{element.CourseName}}
+
+                <p *ngIf="var1">{{code}}</p> {{element.Coursename}}
+
+            </td>
+
+        </ng-container>
+
+        <ng-container matColumnDef="Code">
+
+            <th mat-header-cell *matHeaderCellDef> Topic Name </th>
+
+            <td mat-cell *matCellDef="let element">
+
+                <select name="" id="" style="width: 120px;" placeholder="enter code" [(ngModel)]="code" *ngIf="var3">
+                    <option value="Angular">Angular</option>
+                    <option value="Spring">Spring</option>
+                    <option value="HTML">HTML</option>
+                    <option value="System Programming">System Programming</option>
+                </select>
+
+                <p *ngIf="var1">{{code}}</p> {{element.code}}
+
+            </td>
+
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="CourseName">
+
+            <th mat-header-cell *matHeaderCellDef> Topic Percentage Completes </th>
+
+            <td mat-cell *matCellDef="let element">
+
+
+                <select name="course" id="" style="width: 120px;" placeholder="enter course name" [(ngModel)]="course"
+                    *ngIf="var4">
+                    <option value="Angular">Angular</option>
+                    <option value="Spring">Spring</option>
+                    <option value="HTML">HTML</option>
+                    <option value="System Programming">System Programming</option>
+                </select>
+
+                <p *ngIf="var2">{{course}}</p> {{element.Coursename}}
+
+            </td>
+
+        </ng-container>
+
+
+
+
+
+
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+
+
+
+</div>

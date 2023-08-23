@@ -1,90 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <!--Nav Bar-->
-
-    <mat-toolbar color="primary" style="background-color: rgba(46, 60, 84, 255)">
-
-        <mat-toolbar-row style="min-height: 40px; height: 40px">
-
-            <img src="../../assets/images/logo.png" style="height: 20px; width: 150px" alt="cozentus-logo" />
-
-            <span class="example-spacer"></span>
-
-            <div style="display: flex; justify-content: center; margin-right: 80px;">
-                <div style="height: 30px; width: 30px;  border-radius: 50%; background-color: rgb(246, 33, 207); margin-top: 4px;">
-                      <h5 style="text-align: center; margin-top: 5px;">RS</h5>
-                </div>
-                <div>
-                    <div class="btn-group ml-2">
-                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border: none;">
-                         RR SAMAL
-                        </button>
-                        <div class="dropdown-menu mr-5" style="margin-right: 150px; background-color: rgb(31, 31, 56);" >
-                            <a class="dropdown-item" href="#" style="color: white;">  <img src="../../assets/images/password.png" class="img mx-2" alt="Home">Chage Password</a>
-                            <a class="dropdown-item" href="#" style="color: white;">  <img src="../../assets/images/logout.png" class="img mx-2" alt="Home">Sign Out</a>
-                        
-                        </div>
-                      </div>
-                </div>
-            </div>
-
-        </mat-toolbar-row>
-
-
-
-        <mat-toolbar-row style="min-height: 40px; height: 40px">
-
-            <button mat-stroked-button style="background-color: transparent; color: white; border: none">
-               <img src="../../assets/images/home.png" class="img mx-2" alt="Home">Home
-            </button>
-
-            <button mat-stroked-button style="background-color: transparent; color: white; border: none" (click)="Exam()" >
-
-                <img src="../../assets/images/exams.png" class="img mx-2" alt="exam" />Exams
-
-            </button>
-
-            <button mat-stroked-button style="background-color: transparent; color: white; border: none" (click)="assignment()">
-
-                <img src="../../assets/images/assignment.png" class="img mx-2" alt="assignment" />Assignments
-
-            </button>
-
-            <button mat-stroked-button style="background-color: transparent; color: white; border: none">
-
-                <img src="../../assets/images/point.png" class="img mx-2" alt="reports" />Reports
-
-            </button>
-
-        </mat-toolbar-row>
-
-    </mat-toolbar>
-
- <!-- nav bar end  -->
-  
- <div class="contaier ml-5 bg-white" style="width: 93%; margin-top: 100px;height: 500px;"  *ngIf="var12" >
+<div class="contaier ml-5 bg-white" style="width: 93%; margin-top: 100px;height: 500px;"  >
     <div class="row">
         <div class="col-12">
 
         
       <!-- <mat-tab-group class=" mx-5 my-5 mat-stretch-tabs='false' mat-align-tabs='start'"> -->
         <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-        <mat-tab label="Batches & Programs">
+        
           <div class="container">
 
           </div>
-
-        </mat-tab>
-        <mat-tab label="Attendance">
+        <mat-tab label="please select the option below the get results">
           
           <div class="upper my-5 mx-5">
             <form action=""  style="display: inline-flex;">
@@ -157,12 +82,8 @@
         </div>
       </div>
     </div> -->
-    </div>
     
+    </div>
+    <ng-container #container11></ng-container>
   </div>
-  <ng-container #container10></ng-container>
-
-
-</body>
-
-</html>
+  
