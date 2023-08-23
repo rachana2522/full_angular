@@ -43,7 +43,10 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { TeacherinputComponent } from './teacherinput/teacherinput.component';
 import { StudentComponent } from './student/student.component';
 import { Student1Component } from './student1/student1.component';
-
+import { ProgramComponent } from './program/program.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+import { AttendanceinputComponent } from './attendanceinput/attendanceinput.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +62,10 @@ import { Student1Component } from './student1/student1.component';
     TeacherinputComponent,
     StudentComponent,
     Student1Component,
+    ProgramComponent,
+    AttendanceComponent,
+    AttendanceinputComponent,
+    
 
   ],
   imports: [
@@ -93,6 +100,7 @@ import { Student1Component } from './student1/student1.component';
     MatPaginatorModule,
 
     MatDividerModule,
+    MatCheckboxModule
     
   ],
   providers: [],

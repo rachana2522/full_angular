@@ -66,5 +66,32 @@ this.container4.createComponent(Batchtable1Component)
 
   this.selectedDate = event.value;
   }
+ edittoggletable1=true;
+  edittable1(){
+    this.edittoggletable1 = !this.edittoggletable1;
+    if (this.edittoggletable1==false) {
+     
+    this.var4=false
+    this.var5=false;
+    this.var6=false;
+    this.var1=true;
+    this.var2=true;
+    this.var3=true;
+   }
+   if (this.edittoggletable1==true) {
+     
+    this.var1=false
+    this.var2=false;
+    this.var3=false;
+    this.var4=true;
+    this.var5=true;
+    this.var6=true;
+   }
 
+}
+table1 = true;
+deletetable1(){
+    this.table1=false;
+    this.container4.clear();
+}
 }

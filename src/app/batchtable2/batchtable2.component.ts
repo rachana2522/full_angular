@@ -112,6 +112,34 @@ seclick() {
 
   }
 
- 
+  edittoggletable1=true;
+  edittable3(){
+    this.edittoggletable1 = !this.edittoggletable1;
+    if (this.edittoggletable1==false) {
+     
+    this.var4=false
+    this.var5=false;
+    this.var6=false;
+    this.var1=true;
+    this.var2=true;
+    this.var3=true;
+   }
+   if (this.edittoggletable1==true) {
+     
+    this.var1=false
+    this.var2=false;
+    this.var3=false;
+    this.var4=true;
+    this.var5=true;
+    this.var6=true;
+   }
+
+}
+table3 = true;
+
+deletetable3(){
+    
+   this.table3=false;
+}
 
 }

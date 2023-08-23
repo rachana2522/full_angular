@@ -13,7 +13,7 @@ export class WelcomeComponent {
   username:string=''
   password:string=''
   onSubmit(){
-    if (this.username==='rachana.samal@cozentus.com' && this.password==='samal@123') {
+    if (this.username==='shriram.dash@cozentus.com' && this.password==='Dash@123') {
       console.log('successfully login')
       this.rout.navigate(['/home'])
       sessionStorage.setItem('username',this.username)
