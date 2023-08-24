@@ -2,6 +2,7 @@ import { Component , ViewChild ,ViewContainerRef } from '@angular/core';
 import { AttendanceinputComponent } from '../attendanceinput/attendanceinput.component';
 import { ExamComponent } from '../exam/exam.component';
 import { AssignmentComponent } from '../assignment/assignment.component';
+import { ReportComponent } from '../report/report.component';
 
 @Component({
   selector: 'app-attendance',
@@ -71,5 +72,11 @@ Exam(){
     this.container10.clear()
     this.var12=false;
     this.container10.createComponent(AssignmentComponent)
+  }
+
+  report(){
+    this.container10.clear()
+    this.var12=false;
+    this.container10.createComponent(ReportComponent)
   }
 }

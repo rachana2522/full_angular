@@ -50,6 +50,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ExamComponent } from './exam/exam.component';
 import { Exam1Component } from './exam1/exam1.component';
 import { AssignmentComponent } from './assignment/assignment.component';
+import { ReportComponent } from './report/report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +72,7 @@ import { AssignmentComponent } from './assignment/assignment.component';
     ExamComponent,
     Exam1Component,
     AssignmentComponent,
+    ReportComponent,
     
 
   ],
