@@ -1,9 +1,5 @@
-import { Component , ViewChild ,ViewContainerRef } from '@angular/core';
-import { AttendanceinputComponent } from '../attendanceinput/attendanceinput.component';
-import { TeacherHOmeComponent } from '../teacher-home/teacher-home.component';
-import { TeacherComponent } from '../teacher/teacher.component';
-import { TeacherExamComponent } from '../teacher-exam/teacher-exam.component';
-import { TeacherAssignmentComponent } from '../teacher-assignment/teacher-assignment.component';
+import { Component,ViewChild,ViewContainerRef } from '@angular/core';
+import { TeacherexamtableComponent } from '../teacherexamtable/teacherexamtable.component';
 interface Course {
   code: string;
   courseName: string;
@@ -11,32 +7,16 @@ interface Course {
   topicsInProgress: string;
   completionPercentage: number;
 }
-interface Course1 {
-  code: string;
-  courseName: string;
-  completedTopics: number;
-  topicsInProgress: string;
-  completionPercentage: number;
-}
-interface Count{
-  code1:number;
-  code2:number;
-}
 @Component({
-  selector: 'app-attendance',
-  templateUrl: './attendance.component.html',
-  styleUrls: ['./attendance.component.css']
+  selector: 'app-teacher-exam',
+  templateUrl: './teacher-exam.component.html',
+  styleUrls: ['./teacher-exam.component.css']
 })
-export class AttendanceComponent {
-   
+export class TeacherExamComponent {
+ 
   @ViewChild('container10',{read:ViewContainerRef,static:true})
   container10!:ViewContainerRef;
-  @ViewChild('container12',{read:ViewContainerRef,static:true})
-  container12!:ViewContainerRef;
-  @ViewChild('container13',{read:ViewContainerRef,static:true})
-  container13!:ViewContainerRef;
-  @ViewChild('container14',{read:ViewContainerRef,static:true})
-  container14!:ViewContainerRef;
+
   div1=true;
   div2=false;
   div3=false;
@@ -80,6 +60,17 @@ export class AttendanceComponent {
     this.div5=true;
    
 	}
+  isButtonDisabled = true;
+  onSelected8(value:string): void {
+		this.selectedTeam = value;
+    this.isButtonDisabled=false;
+    
+    this.div2=true;
+    this.div3=true;
+    this.div4=true;
+    this.div5=true;
+   
+	}
 div6=false;
   onSelected4(value:string): void {
 		this.selectedTeam = value;
@@ -93,7 +84,7 @@ div6=false;
 	}
 AddAttendance(){
    this.container10.clear();
-   this.container10.createComponent(AttendanceinputComponent)
+   this.container10.createComponent(TeacherexamtableComponent)
 }
 
 
@@ -106,11 +97,6 @@ completedTopicsArray: string[] = this.courses.map(course => course.completedTopi
 
 val1 = this.completedTopicsArray[0].split(',').length;
 val2 = this.completedTopicsArray[1].split(',').length;
-courses1: Course1[] = [
-  { code: 'C001', courseName: 'Angular Basics', completedTopics: this.val2, topicsInProgress: "Externals File", completionPercentage: 62 },
-  { code: 'C002', courseName: 'Bootstrap Fundamentals', completedTopics: this.val1, topicsInProgress: "NA", completionPercentage: 89 },
-  // Add more courses as needed
-];
 
 
 
@@ -146,25 +132,11 @@ getSortIcon(column: keyof Course): string {
   return 'fa fa-sort';
 }
 
-
+homepart=true;
+onExams(){
+this.homepart=false;
+}
 onHome(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-   this.container12.createComponent(TeacherHOmeComponent)
-}
-onExam(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-  this.container13.createComponent(TeacherExamComponent)
-}
-onAssignment(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-
-  this.container14.createComponent(TeacherAssignmentComponent)
+  this.homepart=true;
 }
 }
-

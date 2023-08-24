@@ -47,6 +47,11 @@ import { ProgramComponent } from './program/program.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { AttendanceinputComponent } from './attendanceinput/attendanceinput.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TeacherHOmeComponent } from './teacher-home/teacher-home.component';
+import { TeacherExamComponent } from './teacher-exam/teacher-exam.component';
+import { TeacherexamtableComponent } from './teacherexamtable/teacherexamtable.component';
+import { TeacherAssignmentComponent } from './teacher-assignment/teacher-assignment.component';
+import { AssignmenttableComponent } from './assignmenttable/assignmenttable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +70,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ProgramComponent,
     AttendanceComponent,
     AttendanceinputComponent,
+    TeacherHOmeComponent,
+    TeacherExamComponent,
+    TeacherexamtableComponent,
+    TeacherAssignmentComponent,
+    AssignmenttableComponent,
     
 
   ],

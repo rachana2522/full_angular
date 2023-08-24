@@ -1,0 +1,101 @@
+<div>
+
+
+    <h3 class="mx-3 my-3">Exams  </h3>
+    
+     <div class="contaier ml-5 bg-white" style="width: 93%; margin-top: 10px;height: 500px;">
+        <div class="row">
+            <div class="col-12">
+              
+              <div class="upper my-5 mx-5" style="height: 100px; background-color: rgb(222, 231, 235);">
+                <h3 class="mx-4" style="font-weight: bold;">Please select the options to get the results</h3>
+                <form action="" class="my-0"  style="display: inline-flex;">
+                  <div class="form-group mx-4">
+                    <select class="form-control" #teams (change)="onSelected(teams.value)" id="exampleFormControlSelect1" style="width: 250px;">
+                      <option dis selected hidden>Batch 4D4127: No. 2</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+
+                    
+                    <!-- <input type="text" id="searchInput" placeholder="Search for a course" oninput="filterOptions()"> -->
+                  
+                  
+                    
+                    
+                    
+                    
+
+                     
+
+
+                  </div>
+                  <div class="form-group" >
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;"  #teams (change)="onSelected1(teams.value)">
+                      <option selected hidden disabled>04 Jan 2023</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group mx-4"  >
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;" #teams (change)="onSelected2(teams.value)">
+                      <option disabled selected hidden>Program Code: Program Name</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group" >
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;" #teams (change)="onSelected8(teams.value)">
+                      <option disabled hidden selected>Course Code: Course Name</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+              </form>
+              </div>
+            <!-- <div class="content mx-5" *ngIf="div5">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>August 07,2023</mat-label>
+                <input matInput [matDatepicker]="picker">
+                
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker (closed)="emit()"></mat-datepicker>
+              </mat-form-field>
+            </div> -->
+            <div class="container"  style="width:100%;">
+                <div class="row">
+                  <div class="col-11"></div>
+                  <div class="col-1">
+                    <button mat-stroked-button style="width: 150px" [disabled]="isButtonDisabled" (click)="AddAttendance()" >Create Exam</button>
+                  </div>
+                </div>
+              </div>
+            <ng-container #container10></ng-container>
+            <!-- </mat-tab>
+          </mat-tab-group> -->
+        </div>
+        <!-- <div class="container"  style="width:100%;">
+          <div class="row">
+            <div class="col-11"></div>
+            <div class="col-1">
+              <button mat-stroked-button style="width: 100px" (click)="AddAttendance()" >Add Data</button>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        
+      </div>
+    
+    </div>
+      
+   

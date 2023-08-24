@@ -7,6 +7,7 @@
   body{
 
     background-color: #e9f1f8;
+   z-index: 1;
 
   }
 
@@ -50,4 +51,12 @@
 ::ng-deep .mat-tab-label {
     padding: 10px !important; 
     justify-content: left !important;
+  }
+  .table th span {
+    opacity: 1;
+  }
+  
+  /* Change sorting icon color to black */
+  .sort-icon {
+    color: black !important;
   }

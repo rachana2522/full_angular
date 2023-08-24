@@ -1,9 +1,5 @@
-import { Component , ViewChild ,ViewContainerRef } from '@angular/core';
+import { Component,ViewChild,ViewContainerRef } from '@angular/core';
 import { AttendanceinputComponent } from '../attendanceinput/attendanceinput.component';
-import { TeacherHOmeComponent } from '../teacher-home/teacher-home.component';
-import { TeacherComponent } from '../teacher/teacher.component';
-import { TeacherExamComponent } from '../teacher-exam/teacher-exam.component';
-import { TeacherAssignmentComponent } from '../teacher-assignment/teacher-assignment.component';
 interface Course {
   code: string;
   courseName: string;
@@ -23,20 +19,15 @@ interface Count{
   code2:number;
 }
 @Component({
-  selector: 'app-attendance',
-  templateUrl: './attendance.component.html',
-  styleUrls: ['./attendance.component.css']
+  selector: 'app-teacher-home',
+  templateUrl: './teacher-home.component.html',
+  styleUrls: ['./teacher-home.component.css']
 })
-export class AttendanceComponent {
-   
+export class TeacherHOmeComponent {
+  
   @ViewChild('container10',{read:ViewContainerRef,static:true})
   container10!:ViewContainerRef;
-  @ViewChild('container12',{read:ViewContainerRef,static:true})
-  container12!:ViewContainerRef;
-  @ViewChild('container13',{read:ViewContainerRef,static:true})
-  container13!:ViewContainerRef;
-  @ViewChild('container14',{read:ViewContainerRef,static:true})
-  container14!:ViewContainerRef;
+
   div1=true;
   div2=false;
   div3=false;
@@ -146,25 +137,11 @@ getSortIcon(column: keyof Course): string {
   return 'fa fa-sort';
 }
 
-
+homepart=true;
+onExams(){
+this.homepart=false;
+}
 onHome(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-   this.container12.createComponent(TeacherHOmeComponent)
-}
-onExam(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-  this.container13.createComponent(TeacherExamComponent)
-}
-onAssignment(){
-  this.container12.clear();
-  this.container13.clear();
-  this.container14.clear();
-
-  this.container14.createComponent(TeacherAssignmentComponent)
+  this.homepart=true;
 }
 }
-

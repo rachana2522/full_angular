@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/version/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
@@ -44,18 +45,18 @@
         <mat-toolbar-row style="min-height: 40px; height: 40px">
 
             <button mat-stroked-button style="background-color: transparent; color: white; border: none">
-               <img src="../../assets/images/home.png" class="img mx-2" alt="Home">Home
+               <img src="../../assets/images/home.png" class="img mx-2" alt="Home" (click)="onHome()" >Home
             </button>
 
             <button mat-stroked-button style="background-color: transparent; color: white; border: none" >
 
-                <img src="../../assets/images/exams.png" class="img mx-2" alt="exam" />Exams
+                <img src="../../assets/images/exams.png" class="img mx-2" alt="exam" (click)="onExam()" />Exams
 
             </button>
 
             <button mat-stroked-button style="background-color: transparent; color: white; border: none" >
 
-                <img src="../../assets/images/assignment.png" class="img mx-2" alt="assignment" />Assignments
+                <img src="../../assets/images/assignment.png" class="img mx-2" alt="assignment"  (click)="onAssignment()" />Assignments
 
             </button>
 
@@ -70,99 +71,9 @@
     </mat-toolbar>
 
  <!-- nav bar end  -->
-  
- <div class="contaier ml-5 bg-white" style="width: 93%; margin-top: 100px;height: 500px;">
-    <div class="row">
-        <div class="col-12">
-
-        
-      <!-- <mat-tab-group class=" mx-5 my-5 mat-stretch-tabs='false' mat-align-tabs='start'"> -->
-        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-        <mat-tab label="Batches & Programs">
-          <div class="container">
-
-          </div>
-
-        </mat-tab>
-        <mat-tab label="Attendance">
-          
-          <div class="upper my-5 mx-5">
-            <form action=""  style="display: inline-flex;">
-              <div class="form-group mx-4">
-                <select class="form-control" #teams (change)="onSelected(teams.value)" id="exampleFormControlSelect1" style="width: 300px;">
-                  <option>one</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group" *ngIf="div2">
-                <select class="form-control" id="exampleFormControlSelect1" style="width: 300px;"  #teams (change)="onSelected1(teams.value)">
-                  <option>two</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group mx-4" *ngIf="div3" >
-                <select class="form-control" id="exampleFormControlSelect1" style="width: 300px;" #teams (change)="onSelected2(teams.value)">
-                  <option>three</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group" *ngIf="div4">
-                <select class="form-control" id="exampleFormControlSelect1" style="width: 300px;" #teams (change)="onSelected3(teams.value)">
-                  <option>four</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-          </form>
-          </div>
-        <div class="content mx-5" *ngIf="div5">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>August 07,2023</mat-label>
-            <input matInput [matDatepicker]="picker">
-            
-            <mat-datepicker-toggle matIconSuffix [for]="picker">
-              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-            </mat-datepicker-toggle>
-            <mat-datepicker #picker (closed)="emit()"></mat-datepicker>
-          </mat-form-field>
-        </div>
-        <div class="container"  style="width:100%;">
-            <div class="row">
-              <div class="col-11"></div>
-              <div class="col-1">
-                <button mat-stroked-button style="width: 100px" (click)="AddAttendance()" >Add Data</button>
-              </div>
-            </div>
-          </div>
-        <ng-container #container10></ng-container>
-        </mat-tab>
-      </mat-tab-group>
-    </div>
-    <!-- <div class="container"  style="width:100%;">
-      <div class="row">
-        <div class="col-11"></div>
-        <div class="col-1">
-          <button mat-stroked-button style="width: 100px" (click)="AddAttendance()" >Add Data</button>
-        </div>
-      </div>
-    </div> -->
-    </div>
-    
-  </div>
-
-
-
+ <ng-container #container12></ng-container>
+ <ng-container #container13></ng-container>
+ <ng-container #container14></ng-container>
 </body>
 
 </html>

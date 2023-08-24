@@ -1,0 +1,157 @@
+<div>
+
+
+    <h3 class="mx-3 my-3">Home</h3>
+    
+     <div class="contaier ml-5 bg-white" style="width: 93%; margin-top: 100px;height: 500px;">
+        <div class="row">
+            <div class="col-12">
+    
+            
+          <!-- <mat-tab-group class=" mx-5 my-5 mat-stretch-tabs='false' mat-align-tabs='start'"> -->
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="Batches & Programs">
+              <div class="content">
+                <div class="upper my-5 mx-5" style="height: 100px; background-color: rgb(222, 231, 235);">
+                  <h3 class="mx-4" style="font-weight: bold;">Please select the options to get the results</h3>
+                  <form action="" class="my-0"  style="display: inline-flex;">
+                    <div class="form-group mx-4">
+                      <select class="form-control" #teams  id="exampleFormControlSelect1" style="width: 250px;">
+                        <option value="" disabled selected hidden>Batch Code: Batch Name</option>
+                        <option>
+                         1
+                        </option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group" >
+                    
+                       <input type="text" onfocus="(this.type='Date')" class="form-control" id="exampleFormControlSelect1" style="width: 250px;"  #teams placeholder="Batch Start Date" >
+                      
+                    </div>
+                    <div class="form-group mx-4"  >
+                      <select class="form-control" id="exampleFormControlSelect1" style="width: 350px;" #teams1 (change)="onSelected4(teams1.value)"  >
+                        <option value="" disabled selected hidden>Program Code: Program Name</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                 
+                </form>
+                </div>
+                <div class="content ml-5" style="width: 1200px" *ngIf="div6">
+                  <div class="container mt-4">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th (click)="sortTable('code')">Code <span [ngClass]="getSortIcon('code')"></span></th>
+                          <th (click)="sortTable('courseName')">Course Name <span [ngClass]="getSortIcon('courseName')"></span></th>
+                          <th>Completed Topics</th>
+                          <th>Topics in Progress</th>
+                          <th>Course Completion Percentage</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let course of courses1; let i = index">
+                          <td>{{ course.code }}</td>
+                          <td>{{ course.courseName }}</td>
+                          <td>{{courses[i].completedTopics}}<a href="" style="text-decoration: underline;">+{{ course.completedTopics }} more</a> </td>
+                          <td>{{ course.topicsInProgress }} <a href="" style="text-decoration: underline;">+{{courses[i].topicsInProgress}} more</a> </td>
+                          <td>{{ course.completionPercentage }}%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+    
+            </mat-tab>
+            <mat-tab label="Attendance">
+              
+              <div class="upper my-5 mx-5" style="height: 100px; background-color: rgb(222, 231, 235);">
+                <h3 class="mx-4" style="font-weight: bold;">Please select the options to get the results</h3>
+                <form action="" class="my-0"  style="display: inline-flex;">
+                  <div class="form-group mx-4">
+                    <select class="form-control" #teams (change)="onSelected(teams.value)" id="exampleFormControlSelect1" style="width: 250px;">
+                      <option>one</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group" *ngIf="div2">
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;"  #teams (change)="onSelected1(teams.value)">
+                      <option>two</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group mx-4" *ngIf="div3" >
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;" #teams (change)="onSelected2(teams.value)">
+                      <option>three</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group" *ngIf="div4">
+                    <select class="form-control" id="exampleFormControlSelect1" style="width: 250px;" #teams (change)="onSelected3(teams.value)">
+                      <option>four</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+              </form>
+              </div>
+            <div class="content mx-5" *ngIf="div5">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>August 07,2023</mat-label>
+                <input matInput [matDatepicker]="picker">
+                
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker (closed)="emit()"></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="container"  style="width:100%;">
+                <div class="row">
+                  <div class="col-11"></div>
+                  <div class="col-1">
+                    <button mat-stroked-button style="width: 100px" (click)="AddAttendance()" >Add Data</button>
+                  </div>
+                </div>
+              </div>
+            <ng-container #container10></ng-container>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+        <!-- <div class="container"  style="width:100%;">
+          <div class="row">
+            <div class="col-11"></div>
+            <div class="col-1">
+              <button mat-stroked-button style="width: 100px" (click)="AddAttendance()" >Add Data</button>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        
+      </div>
+    
+    </div>
+    
